@@ -4,19 +4,27 @@
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
+    "android": "expo start --Ios",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-picker/picker": "^2.8.1",
+    "@react-navigation/stack": "^6.4.1",
+    "crypto-browserify": "^3.12.0",
     "expo": "~51.0.28",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
-    "react-native": "0.74.5"
+    "react-dom": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-get-random-values": "^1.11.0",
+    "react-native-web": "~0.19.10",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.45",
+    "@types/uuid": "^10.0.0",
     "typescript": "^5.1.3"
   },
   "private": true

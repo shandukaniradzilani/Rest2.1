@@ -1,21 +1,27 @@
+import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { View, Text, Button, FlatList, StyleSheet, Alert, Touchable, TouchableOpacity } from 'react-native';
 import AddMenuItemScreen from './AddMenuItemScreen';
+
+
 
 type MenuItem = {
   id: string;
   name: string;
   description: string;
   course: string;
-  price: string;
+  price: number;
 };
 
 const Stack = createStackNavigator();
 
 const HomeScreen = ({ navigation }: any) => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+
+ 
+
 
   return (
     <View style={styles.container}>
@@ -52,8 +58,25 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
+  container: { flex: 1, padding: 20, backgroundColor: '#f0f8ff'},
   title: { fontSize: 24, fontWeight: 'bold', marginBottom: 10 },
   menuItem: { padding: 10, borderBottomWidth: 1, borderBottomColor: '#ccc' },
+  menuItemTitle:{ fontSize: 18, fontWeight: 'bold'},
+  removeButton: {
+    marginTop: 10,
+    padding: 10,
+    backgroundColor: 'red',
+    borderRadius: 5,
+  },
+  removeButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign:'center'
+  }
+  
 });
+
+function _interopRequireDefault(arg0: any) {
+    throw new Error('Function not implemented.');
+}
 
