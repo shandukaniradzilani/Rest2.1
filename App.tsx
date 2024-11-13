@@ -34,7 +34,7 @@ const HomeScreen = ({ navigation }: any) => {
           <View style={styles.menuItem}>
             <Text>{item.name}</Text>
             <Text>{item.description}</Text>
-            <Text>{item.course} - ${item.price}</Text>
+            <Text>{item.course} - R{item.price}</Text>
           </View>
         )}
       />

@@ -47,13 +47,9 @@ const AddMenuItemScreen = ({ route, navigation }: any) => {
       <TextInput style={styles.input} value={course} onChangeText={setCourse} placeholder="Type of Course"/>
 
       <Text style={styles.label}>Price</Text>
-    <Picker
-    selectedValue={course}
-    onValueChange={(itemValue) setCourse(itemValue)}
-    style={styles.picker}>
-    
-
-      <Button title="Add Item" onPress={addMenuItem} />
+      <TextInput style={styles.input} value={price} onChangeText={setPrice} placeholder="Enter Price"/>
+      
+      <Button title="Add Item" onPress={addMenuItem}/>
     </View>
   );
 };
